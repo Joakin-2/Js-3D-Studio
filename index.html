@@ -7,11 +7,16 @@
 <title>Js 3D Studio | Catálogo Oficial</title>
 
 <style>
+html {
+    background: #0b0b0f;
+}
+
 body {
     margin: 0;
     font-family: Arial, sans-serif;
     background: #0b0b0f;
     color: #e4e4e4;
+    padding-bottom: 120px; /* espaço para o footer fixo */
 }
 
 /* HEADER COM GRADIENTE ROXO */
@@ -38,16 +43,20 @@ header {
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     gap: 20px;
     padding: 20px;
-    margin-right: 320px;
+    margin-right: 340px;
 }
 
-.card {
-    background: #14141c;
-    border-radius: 14px;
-    padding: 15px;
-    text-align: center;
-    transition: 0.3s;
-    border: 1px solid #2a2a3a;
+.cart {
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 320px;
+    height: 100vh;
+    background: #11111a;
+    padding: 20px;
+    overflow-y: auto;
+    border-left: 2px solid #7f00ff;
+    box-sizing: border-box;
 }
 
 .card:hover {
@@ -65,6 +74,33 @@ header {
     font-weight: bold;
     margin: 10px 0;
     font-size: 18px;
+}
+
+.info-linha {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px 0;
+}
+
+.quantidade {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.quantidade button {
+    width: 30px;
+    height: 30px;
+    padding: 0;
+    font-size: 18px;
+    border-radius: 6px;
+}
+
+.quantidade span {
+    min-width: 20px;
+    text-align: center;
+    font-weight: bold;
 }
 
 input {
@@ -127,6 +163,99 @@ button:hover {
 .finalizar {
     margin-top: 15px;
 }
+
+/* ================= ONDE COMPRAR ================= */
+
+.onde-comprar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: #0f0f18;
+    border-top: 2px solid #7f00ff;
+    padding: 15px 10px;
+    text-align: center;
+    z-index: 1000;
+}
+
+.onde-comprar h2 {
+    margin: 5px 0 10px;
+    font-size: 16px;
+}
+
+.links-lojas {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.links-lojas a {
+    text-decoration: none;
+    background: linear-gradient(90deg, #5f0fff, #7f00ff);
+    padding: 12px 20px;
+    border-radius: 8px;
+    color: white;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.links-lojas a:hover {
+    opacity: 0.8;
+}
+
+/* ================= RESPONSIVIDADE ================= */
+
+/* TABLET */
+@media (max-width: 1024px) {
+    .container {
+        margin-right: 0;
+    }
+
+    .cart {
+        position: relative;
+        width: 100%;
+        height: auto;
+        border-left: none;
+        border-top: 2px solid #7f00ff;
+    }
+}
+
+/* CELULAR */
+@media (max-width: 768px) {
+    header {
+        font-size: 20px;
+        padding: 15px;
+    }
+
+    .container {
+        grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+        padding: 15px;
+    }
+
+    .card {
+        padding: 10px;
+    }
+
+    .price {
+        font-size: 16px;
+    }
+
+    button {
+        font-size: 14px;
+    }
+}
+
+/* TV / TELAS GRANDES */
+@media (min-width: 1600px) {
+    .container {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+
+    body {
+        font-size: 20px;
+    }
+}
 </style>
 </head>
 <body>
@@ -148,11 +277,37 @@ button:hover {
     <button class="finalizar" onclick="finalizarPedido()">Enviar Pedido</button>
 </div>
 
+<!-- ================= ONDE COMPRAR ================= -->
+<div class="onde-comprar">
+    <h2>Onde Comprar</h2>
+    <div class="links-lojas">
+        <a href="https://lista.mercadolivre.com.br/_CustId_530725891?item_id=MLB6230829140&category_id=MLB1839&seller_id=530725891&client=recoview-selleritems&recos_listing=true#origin=vip&component=sellerData&typeSeller=classic" target="_blank">
+            🟡 Mercado Livre
+        </a>
+
+        <a href="https://shopee.com.br/paulacristin24?categoryId=100639&entryPoint=ShopByPDP&itemId=22699353152" target="_blank">
+            🟠 Shopee
+        </a>
+
+        <a href="https://www.facebook.com/marketplace/profile/100011864506959/" target="_blank">
+            🔵 Marketplace
+        </a>
+
+        <a href="https://wa.me/55013997110454?text=Olá,%20tudo%20bem?%20Vim%20pelo%20site%20da%20Js%203D%20Studio." target="_blank">
+            🟢 WhatsApp
+        </a>
+    </div>
+</div>
+
 <script>
 const produtos = [
-    { id: 1, nome: "Boneco Samurai", preco: 89.90, img: "https://via.placeholder.com/200" },
-    { id: 2, nome: "Miniatura Anime", preco: 59.90, img: "https://via.placeholder.com/200" },
-    { id: 3, nome: "Estátua Personalizada", preco: 149.90, img: "https://via.placeholder.com/200" }
+    { id: 1, nome: "Disparervilha Inspirado Pvz", preco: 52.90, img: "https://scontent.fcgh59-1.fna.fbcdn.net/v/t45.5328-4/628333919_1572763190436338_7531476903241978257_n.webp?stp=dst-webp_p960x960&_nc_cat=109&ccb=1-7&_nc_sid=247b10&_nc_eui2=AeGvuFV0seYRpSu9MNwlbIIDYaTx8W3AQGdhpPHxbcBAZ3I7iOE4upCpml07kin5IzMOu_aL6lFzGiGh8riH2wIG&_nc_ohc=rvHKzJmuiDAQ7kNvwErGv3r&_nc_oc=AdnIGB_QgLoftXxulXgfz2LO-Ca4-2gGjRfJWNZ3P3I0K-eJSGlvDOVp9i1J4y4ej7HP3UP5kAkZwi670SELAsF0&_nc_zt=23&_nc_ht=scontent.fcgh59-1.fna&_nc_gid=Z494xKlCeu7VicqP06TA1w&oh=00_AfucaBS1hDtWzqJ7nVBTts7Kjfps5C-vPLbiLnjSRbhM2g&oe=699420D4" },
+    { id: 2, nome: "Flor Tulipa Estilo Minecraft", preco: 29.90, img: "https://scontent.fcgh59-1.fna.fbcdn.net/v/t45.5328-4/631797860_913143331167203_4426578610865502680_n.webp?stp=dst-webp_p960x960&_nc_cat=105&ccb=1-7&_nc_sid=247b10&_nc_eui2=AeEiHuyCAy7ts7BOx8d3c-ZtfbiyEfSkev99uLIR9KR6_wurjZQrTdwNTNB80_kuyFt7LD1alzzio4dyer0xk7xB&_nc_ohc=FEYG1nsueWEQ7kNvwEWyity&_nc_oc=AdkNhXi-xm7eGLhMobNjfLt3BYTZrPOvkt7NJxUeklRVk82YmfZ9Mf8mHKUg7-5TopCo7SH47xc90bAVXiVcc_EY&_nc_zt=23&_nc_ht=scontent.fcgh59-1.fna&_nc_gid=As1_DAD8TgoUzywux9V6Ww&oh=00_AfuA-9ZVjkCFLeviPjcz7wPYyYS0ssjhDK1Zx9h_NfYfDA&oe=69944896" },
+    { id: 3, nome: "Porta-copos Estilo LEGO", preco: 49.90, img: "https://scontent.fcgh59-1.fna.fbcdn.net/v/t45.5328-4/629442911_2446428275813224_6217640429930474959_n.jpg?stp=dst-jpg_p640x640_tt6&_nc_cat=102&ccb=1-7&_nc_sid=247b10&_nc_eui2=AeFWwr_4M7cuSY9-unDGQW49UpnlR1OyyGtSmeVHU7LIa8dWqqxTw60uO9Yao2d3obhu8bDGlMApmx_7C6VWt9BZ&_nc_ohc=__DVtTf14HsQ7kNvwFLk8pB&_nc_oc=AdkpwCAuR0DDv6GUvwmrxiwejLoRMFxDYWXaDRs7Se1q8H3cm7FcPOarVKmkPtVP-SeWWnYLo_zWlycvCpSeUIdr&_nc_zt=23&_nc_ht=scontent.fcgh59-1.fna&_nc_gid=nk-px9jf1-hWTTmnXJaKyg&oh=00_Aftuv8q6uYAk8Jswt8J0Tr_KlOhp4kIKthszwFASOIJP2A&oe=69944918" },
+    
+    { id: 4, nome: "Disparervilha Inspirado Pvz", preco: 52.90, img: "https://scontent.fcgh59-1.fna.fbcdn.net/v/t45.5328-4/628333919_1572763190436338_7531476903241978257_n.webp?stp=dst-webp_p960x960&_nc_cat=109&ccb=1-7&_nc_sid=247b10&_nc_eui2=AeGvuFV0seYRpSu9MNwlbIIDYaTx8W3AQGdhpPHxbcBAZ3I7iOE4upCpml07kin5IzMOu_aL6lFzGiGh8riH2wIG&_nc_ohc=rvHKzJmuiDAQ7kNvwErGv3r&_nc_oc=AdnIGB_QgLoftXxulXgfz2LO-Ca4-2gGjRfJWNZ3P3I0K-eJSGlvDOVp9i1J4y4ej7HP3UP5kAkZwi670SELAsF0&_nc_zt=23&_nc_ht=scontent.fcgh59-1.fna&_nc_gid=Z494xKlCeu7VicqP06TA1w&oh=00_AfucaBS1hDtWzqJ7nVBTts7Kjfps5C-vPLbiLnjSRbhM2g&oe=699420D4" },
+    { id: 5, nome: "Flor Tulipa Inspirada No Minecraft", preco: 29.90, img: "https://scontent.fcgh59-1.fna.fbcdn.net/v/t45.5328-4/631797860_913143331167203_4426578610865502680_n.webp?stp=dst-webp_p960x960&_nc_cat=105&ccb=1-7&_nc_sid=247b10&_nc_eui2=AeEiHuyCAy7ts7BOx8d3c-ZtfbiyEfSkev99uLIR9KR6_wurjZQrTdwNTNB80_kuyFt7LD1alzzio4dyer0xk7xB&_nc_ohc=FEYG1nsueWEQ7kNvwEWyity&_nc_oc=AdkNhXi-xm7eGLhMobNjfLt3BYTZrPOvkt7NJxUeklRVk82YmfZ9Mf8mHKUg7-5TopCo7SH47xc90bAVXiVcc_EY&_nc_zt=23&_nc_ht=scontent.fcgh59-1.fna&_nc_gid=As1_DAD8TgoUzywux9V6Ww&oh=00_AfuA-9ZVjkCFLeviPjcz7wPYyYS0ssjhDK1Zx9h_NfYfDA&oe=69944896" },
+    { id: 6, nome: "Porta-copos estilo LEGO", preco: 49.90, img: "https://scontent.fcgh59-1.fna.fbcdn.net/v/t45.5328-4/629442911_2446428275813224_6217640429930474959_n.jpg?stp=dst-jpg_p640x640_tt6&_nc_cat=102&ccb=1-7&_nc_sid=247b10&_nc_eui2=AeFWwr_4M7cuSY9-unDGQW49UpnlR1OyyGtSmeVHU7LIa8dWqqxTw60uO9Yao2d3obhu8bDGlMApmx_7C6VWt9BZ&_nc_ohc=__DVtTf14HsQ7kNvwFLk8pB&_nc_oc=AdkpwCAuR0DDv6GUvwmrxiwejLoRMFxDYWXaDRs7Se1q8H3cm7FcPOarVKmkPtVP-SeWWnYLo_zWlycvCpSeUIdr&_nc_zt=23&_nc_ht=scontent.fcgh59-1.fna&_nc_gid=nk-px9jf1-hWTTmnXJaKyg&oh=00_Aftuv8q6uYAk8Jswt8J0Tr_KlOhp4kIKthszwFASOIJP2A&oe=69944918" }
 ];
 
 let carrinho = [];
@@ -160,20 +315,44 @@ let carrinho = [];
 const container = document.getElementById("produtos");
 
 produtos.forEach(produto => {
+
+    const alturaEspecial = produto.id === 3 
+        ? 'style="height:250px; object-fit:cover;"' 
+        : '';
+
     container.innerHTML += `
         <div class="card">
-            <img src="${produto.img}">
+            <img src="${produto.img}" ${alturaEspecial}>
             <h3>${produto.nome}</h3>
-            <div class="price">R$ ${produto.preco.toFixed(2)}</div>
-            <input type="number" min="1" value="1" id="qtd-${produto.id}">
-            <button onclick="adicionar(${produto.id})">Adicionar</button>
+            <div class="info-linha">
+    <div class="price">R$ ${produto.preco.toFixed(2)}</div>
+
+    <div class="quantidade">
+        <button onclick="alterarQtd(${produto.id}, -1)">−</button>
+        <span id="qtd-${produto.id}">1</span>
+        <button onclick="alterarQtd(${produto.id}, 1)">+</button>
+    </div>
+</div>
+
+<button onclick="adicionar(${produto.id})">Adicionar</button>
         </div>
     `;
 });
 
+function alterarQtd(id, valor) {
+    const span = document.getElementById(`qtd-${id}`);
+    let atual = parseInt(span.innerText);
+
+    atual += valor;
+
+    if (atual < 1) atual = 1;
+
+    span.innerText = atual;
+}
+
 function adicionar(id) {
     const produto = produtos.find(p => p.id === id);
-    const quantidade = parseInt(document.getElementById(`qtd-${id}`).value);
+    const quantidade = parseInt(document.getElementById(`qtd-${id}`).innerText);
 
     carrinho.push({ ...produto, quantidade });
     atualizarCarrinho();
