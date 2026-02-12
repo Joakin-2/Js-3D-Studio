@@ -3,18 +3,20 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🛒</text></svg>">
 <title>Js 3D Studio | Catálogo Oficial</title>
 
 <style>
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    background: #0f0f0f;
-    color: white;
+    background: #0b0b0f;
+    color: #e4e4e4;
 }
 
+/* HEADER COM GRADIENTE ROXO */
 header {
-    background: linear-gradient(90deg, #5e17eb, #ff6600);
+    background: linear-gradient(90deg, #2a0845, #6441a5, #7f00ff);
     padding: 20px;
     text-align: center;
     font-size: 26px;
@@ -22,13 +24,15 @@ header {
     letter-spacing: 1px;
 }
 
+/* SUBTITULO */
 .subtitulo {
     text-align: center;
     margin-top: 10px;
     font-size: 14px;
-    color: #ccc;
+    color: #b9b9b9;
 }
 
+/* PRODUTOS */
 .container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -38,15 +42,17 @@ header {
 }
 
 .card {
-    background: #1c1c1c;
-    border-radius: 12px;
+    background: #14141c;
+    border-radius: 14px;
     padding: 15px;
     text-align: center;
     transition: 0.3s;
+    border: 1px solid #2a2a3a;
 }
 
 .card:hover {
-    transform: scale(1.04);
+    transform: scale(1.05);
+    border: 1px solid #7f00ff;
 }
 
 .card img {
@@ -55,21 +61,25 @@ header {
 }
 
 .price {
-    color: #ff6600;
+    color: #a855f7;
     font-weight: bold;
     margin: 10px 0;
+    font-size: 18px;
 }
 
 input {
     width: 60px;
-    padding: 5px;
-    border-radius: 5px;
+    padding: 6px;
+    border-radius: 6px;
     border: none;
     text-align: center;
+    background: #1e1e2f;
+    color: white;
 }
 
+/* BOTÕES ROXOS */
 button {
-    background: #5e17eb;
+    background: linear-gradient(90deg, #5f0fff, #7f00ff);
     border: none;
     padding: 10px;
     border-radius: 8px;
@@ -77,22 +87,24 @@ button {
     cursor: pointer;
     width: 100%;
     margin-top: 8px;
+    font-weight: bold;
 }
 
 button:hover {
-    background: #ff6600;
+    opacity: 0.85;
 }
 
+/* CARRINHO LATERAL */
 .cart {
     position: fixed;
     right: 0;
     top: 0;
     width: 300px;
     height: 100%;
-    background: #181818;
+    background: #11111a;
     padding: 20px;
     overflow-y: auto;
-    border-left: 2px solid #333;
+    border-left: 2px solid #7f00ff;
 }
 
 .cart h2 {
@@ -101,7 +113,7 @@ button:hover {
 
 .cart-item {
     margin-bottom: 10px;
-    border-bottom: 1px solid #333;
+    border-bottom: 1px solid #2a2a3a;
     padding-bottom: 5px;
 }
 
@@ -109,11 +121,11 @@ button:hover {
     margin-top: 15px;
     font-weight: bold;
     font-size: 18px;
+    color: #a855f7;
 }
 
 .finalizar {
     margin-top: 15px;
-    background: #ff6600;
 }
 </style>
 </head>
