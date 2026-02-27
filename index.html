@@ -29,6 +29,12 @@ header {
     letter-spacing: 1px;
 }
 
+.card {
+    background: #0f0f18;
+    transition: 0.3s;
+    box-shadow: 0 0 15px rgba(127, 0, 255, 0.2);
+}
+
 /* SUBTITULO */
 .subtitulo {
     text-align: center;
@@ -57,6 +63,14 @@ header {
     overflow-y: auto;
     border-left: 2px solid #7f00ff;
     box-sizing: border-box;
+}
+
+.card h3 {
+    min-height: 40px;
+    display: -webkit-box;
+    -webkit-line-clamp: 1; /* número máximo de linhas */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
 }
 
 .card:hover {
@@ -135,6 +149,7 @@ button:hover {
     position: fixed;
     right: 0;
     top: 0;
+    z-index: 1000;
     width: 300px;
     height: 100%;
     background: #11111a;
@@ -167,15 +182,12 @@ button:hover {
 /* ================= ONDE COMPRAR ================= */
 
 .onde-comprar {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
+    position: absolute;
+    width: 95%;
     background: #0f0f18;
     border-top: 2px solid #7f00ff;
     padding: 15px 10px;
     text-align: center;
-    z-index: 1000;
 }
 
 .onde-comprar h2 {
@@ -219,6 +231,15 @@ button:hover {
         border-left: none;
         border-top: 2px solid #7f00ff;
     }
+
+    .card h3 {
+    font-size: 16px;
+    min-height: 40px;
+    display: -webkit-box;
+    -webkit-line-clamp: 1; /* número máximo de linhas */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
 }
 
 /* CELULAR */
@@ -273,7 +294,7 @@ button:hover {
 <div class="cart">
     <h2>Seu Pedido</h2>
     <div id="cart-items"></div>
-    <div class="total">Total: R$ <span id="total">0.00</span></div>
+    <div class="total">Total: R$ <span id="total">0,00</span></div>
     <button class="finalizar" onclick="finalizarPedido()">Enviar Pedido</button>
 </div>
 
@@ -299,25 +320,8 @@ button:hover {
     </div>
 </div>
 
+<script src="script.js"></script>
 <script>
-const produtos = [
-    { id: 1, nome: "Disparervilha Inspirado Pvz", preco: 19.90, img: "https://down-br.img.susercontent.com/file/br-11134207-81ztc-mkin905algcg5e.webp" },
-    { id: 2, nome: "Flor Tulipa Estilo Minecraft", preco: 10.50, img: "https://down-br.img.susercontent.com/file/br-11134207-81ztc-mkin905ekq9uec.webp" },
-    { id: 3, nome: "Porta-copos Estilo LEGO", preco: 35.90, img: "https://down-br.img.susercontent.com/file/br-11134207-81zun-mkjt97cqfuv47d.webp" },
-    
-    { id: 4, nome: "Fidget Cubo Infinito", preco: 9.20, img: "https://down-br.img.susercontent.com/br-11134207-81zue-mko8gmu5h8ubc7"},
-    { id: 5, nome: "Porta-Copos Folha Monstera", preco: 4.90, img: "https://down-br.img.susercontent.com/br-11134207-81zub-mko9od5z708x37" },
-    { id: 6, nome: "Tubarão Articulado Brinquedo", preco: 6.80, img: "https://down-br.img.susercontent.com/br-11134207-81zu5-mko9od5ze135c7" },
-
-    { id: 7, nome: "Dinossauro Rex Articulado", preco: 9.50, img: "https://down-br.img.susercontent.com/br-11134207-81zu7-mkoa4s3st4hva1"},
-    { id: 8, nome: "Shuriken Fidget Spinner 3D", preco: 16.50, img: "https://down-br.img.susercontent.com/file/br-11134207-81zug-mku5se7ejgg128.webp"},
-    { id: 9, nome: "Fidget Trevo da Sorte 4 Folhas", preco: 15.90, img: "https://down-br.img.susercontent.com/file/br-11134207-81zuh-ml5ksgmnhhxj68.webp" },
-
-    { id: 10, nome: "Infinity Fidget Antiestresse", preco: 19.50, img: "https://down-br.img.susercontent.com/file/br-11134207-81zul-ml5mzqwbo6x2af@resize_w450_nl.webp"},
-    { id: 11, nome: "Brinquedo Shark Flexível", preco: 10.50, img: "https://down-br.img.susercontent.com/file/br-11134207-81ztg-ml5ox1qk7ojpf2@resize_w450_nl.webp"},
-    { id: 12, nome: "Chaveiro de Gato Cute", preco: 2.90, img: "https://down-br.img.susercontent.com/file/br-11134207-81zts-ml5ox1qinhty9c.webp" },
-];
-
 let carrinho = [];
 
 const container = document.getElementById("produtos");
@@ -326,20 +330,12 @@ produtos.forEach(produto => {
 
     let alturaEspecial = '';
 
-if (produto.id === 3) {
-    alturaEspecial = 'style="height:355px; object-fit:cover;"';
-}
-
-if (produto.id === 7) {
-    alturaEspecial = 'style="height:355px; object-fit:cover;"';
-}
-
     container.innerHTML += `
         <div class="card">
             <img src="${produto.img}" ${alturaEspecial}>
             <h3>${produto.nome}</h3>
             <div class="info-linha">
-    <div class="price">R$ ${produto.preco.toFixed(2)}</div>
+    <div class="price">R$ ${produto.preco.toLocaleString("pt-BR", { minimumFractionDigits: 2 })}</div>
 
     <div class="quantidade">
         <button onclick="alterarQtd(${produto.id}, -1)">−</button>
@@ -368,7 +364,19 @@ function adicionar(id) {
     const produto = produtos.find(p => p.id === id);
     const quantidade = parseInt(document.getElementById(`qtd-${id}`).innerText);
 
-    carrinho.push({ ...produto, quantidade });
+    const existente = carrinho.find(item => item.id === id);
+
+    if (existente) {
+        existente.quantidade += quantidade;
+    } else {
+        carrinho.push({ ...produto, quantidade });
+    }
+
+    atualizarCarrinho();
+}
+
+function remover(id) {
+    carrinho = carrinho.filter(item => item.id !== id);
     atualizarCarrinho();
 }
 
@@ -378,15 +386,23 @@ function atualizarCarrinho() {
     let total = 0;
 
     carrinho.forEach(item => {
-        total += item.preco * item.quantidade;
+        const subtotal = item.preco * item.quantidade;
+        total += subtotal;
+
         cartDiv.innerHTML += `
             <div class="cart-item">
                 ${item.nome} x${item.quantidade}
+                <br>R$ ${subtotal.toLocaleString("pt-BR", { minimumFractionDigits: 2 })}
+                <button onclick="remover(${item.id})" 
+                        style="margin-top:5px;background:#ff4d4d;">
+                    Remover
+                </button>
             </div>
         `;
     });
 
-    document.getElementById("total").innerText = total.toFixed(2);
+    document.getElementById("total").innerText = 
+    total.toLocaleString("pt-BR", { minimumFractionDigits: 2 });
 }
 
 function finalizarPedido() {

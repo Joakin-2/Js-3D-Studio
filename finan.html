@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🛒</text></svg>">
+<title>Painel Financeiro - Js 3D Studio</title>
+
+<style>
+body {
+    font-family: Arial;
+    background: #0b0b0f;
+    color: white;
+    padding: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    padding: 10px;
+    border-bottom: 1px solid #333;
+    text-align: center;
+}
+
+th {
+    background: #1a1a2a;
+}
+
+.lucro {
+    color: #00ff88;
+    font-weight: bold;
+}
+
+.prejuizo {
+    color: #ff4d4d;
+    font-weight: bold;
+}
+</style>
+</head>
+<body>
+
+<h1>📊 Painel Financeiro</h1>
+
+<table>
+    <thead>
+        <tr>
+            <th>Produto</th>
+            <th>Venda</th>
+            <th>Filamento</th>
+            <th>Custo</th>
+            <th>Tempo</th>
+            <th>Watts</th>
+            <th>Plus</th>
+            <th>Embalagem</th>
+            <th>Custo Total</th>
+            <th>Lucro</th>
+            <th>Margem</th>
+        </tr>
+    </thead>
+    <tbody id="tabela-financeira"></tbody>
+</table>
+
+<script src="script.js"></script>
+<script>
+
+const tabela = document.getElementById("tabela-financeira");
+
+const potenciaImpressora = 350; // watts
+const valorKwh = 0.90; // R$/kWh
+
+const precoFilamentoKg = 120; // R$ por kg
+const precoPorGrama = precoFilamentoKg / 1000; // R$/g
+
+produtosf.forEach(produto => {
+    const c = produto.custos;
+
+    // Cálculo filamento
+    const custoFilamento = c.filamentoGramas * precoPorGrama;
+
+    // Energia
+    const consumoKwh = (potenciaImpressora / 1000) * c.tempoHoras;
+    const custoEnergia = consumoKwh * valorKwh;
+
+    // Custo total
+    const custoTotal = custoFilamento + custoEnergia + c.plus + c.embalagem;
+
+    const lucro = produto.preco - custoTotal;
+    const margem = ((lucro / produto.preco) * 100).toFixed(1);
+
+    tabela.innerHTML += `
+        <tr>
+            <td>${produto.nome}</td>
+            <td>${formatar(produto.preco)}</td>
+            <td>${c.filamentoGramas}g</td>
+            <td>${formatar(custoFilamento)}</td>
+            <td>⏱ ${c.tempoHoras}h</td>
+            <td>${formatar(custoEnergia)}</td>
+            <td>${formatar(c.plus)}</td>
+            <td>${formatar(c.embalagem)}</td>
+            <td>${formatar(custoTotal)}</td>
+            <td class="${lucro >= 0 ? 'lucro' : 'prejuizo'}">
+                ${formatar(lucro)}
+            </td>
+            <td>${margem}%</td>
+        </tr>
+    `;
+});
+
+</script>
+
+</body>
+</html>
