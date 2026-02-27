@@ -421,10 +421,10 @@ function finalizarPedido() {
 
         resumo += `• ${item.nome}%0A`;
         resumo += `Quantidade: ${item.quantidade}%0A`;
-        resumo += `Subtotal: R$ ${subtotal.toFixed(2)}%0A%0A`;
+        resumo += `Subtotal: R$ ${subtotal.toLocaleString("pt-BR", { minimumFractionDigits: 2 })}%0A%0A`;
     });
 
-    resumo += `Valor Total: R$ ${total.toFixed(2)}%0A%0A`;
+    resumo += `Valor Total: R$ ${total.toLocaleString("pt-BR", { minimumFractionDigits: 2 })}%0A%0A`;
     resumo += "Aguardo confirmação. Obrigado!";
 
     window.open(`https://wa.me/55013997110454?text=${resumo}`);
@@ -433,6 +433,7 @@ function finalizarPedido() {
 
 </body>
 </html>
+
 
 
 
