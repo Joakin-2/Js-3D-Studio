@@ -15,7 +15,7 @@ const produtos = [
     { id: 11, nome: "Brinquedo Shark Flexível", preco: 10.50, img: "https://down-br.img.susercontent.com/file/br-11134207-81ztg-ml5ox1qk7ojpf2@resize_w450_nl.webp"},
     { id: 12, nome: "Chaveiro de Gato Cute", preco: 2.90, img: "https://down-br.img.susercontent.com/file/br-11134207-81zts-ml5ox1qinhty9c.webp" },
 
-    //{ id: 13, nome: "Cubo Infinito de Decoração", preco: 14.90, img: "cube.png"},
+    //new { id: 13, nome: "Cubo Infinito de Decoração", preco: 14.90, img: "cube.png"},
     //{ id: 14, nome: "Brinquedo Shark Flexível", preco: 10.50, img: "https://down-br.img.susercontent.com/file/br-11134207-81ztg-ml5ox1qk7ojpf2@resize_w450_nl.webp"},
     //{ id: 15, nome: "Chaveiro de Gato Cute", preco: 2.90, img: "https://down-br.img.susercontent.com/file/br-11134207-81zts-ml5ox1qinhty9c.webp" },
 
