@@ -14,6 +14,22 @@ const produtos = [
     { id: 10, nome: "Infinity Fidget Antiestresse", preco: 19.50, img: "https://down-br.img.susercontent.com/file/br-11134207-81zul-ml5mzqwbo6x2af@resize_w450_nl.webp"},
     { id: 11, nome: "Brinquedo Shark Flexível", preco: 10.50, img: "https://down-br.img.susercontent.com/file/br-11134207-81ztg-ml5ox1qk7ojpf2@resize_w450_nl.webp"},
     { id: 12, nome: "Chaveiro de Gato Cute", preco: 2.90, img: "https://down-br.img.susercontent.com/file/br-11134207-81zts-ml5ox1qinhty9c.webp" },
+
+    { id: 13, nome: "Cubo Infinito de Decoração", preco: 14.90, img: "cube.png"},
+    //{ id: 14, nome: "Brinquedo Shark Flexível", preco: 10.50, img: "https://down-br.img.susercontent.com/file/br-11134207-81ztg-ml5ox1qk7ojpf2@resize_w450_nl.webp"},
+    //{ id: 15, nome: "Chaveiro de Gato Cute", preco: 2.90, img: "https://down-br.img.susercontent.com/file/br-11134207-81zts-ml5ox1qinhty9c.webp" },
+
+    //{ id: 16, nome: "Infinity Fidget Antiestresse", preco: 19.50, img: "https://down-br.img.susercontent.com/file/br-11134207-81zul-ml5mzqwbo6x2af@resize_w450_nl.webp"},
+    //{ id: 17, nome: "Brinquedo Shark Flexível", preco: 10.50, img: "https://down-br.img.susercontent.com/file/br-11134207-81ztg-ml5ox1qk7ojpf2@resize_w450_nl.webp"},
+    //{ id: 18, nome: "Chaveiro de Gato Cute", preco: 2.90, img: "https://down-br.img.susercontent.com/file/br-11134207-81zts-ml5ox1qinhty9c.webp" },
+
+    //{ id: 19, nome: "Infinity Fidget Antiestresse", preco: 19.50, img: "https://down-br.img.susercontent.com/file/br-11134207-81zul-ml5mzqwbo6x2af@resize_w450_nl.webp"},
+    //{ id: 20, nome: "Brinquedo Shark Flexível", preco: 10.50, img: "https://down-br.img.susercontent.com/file/br-11134207-81ztg-ml5ox1qk7ojpf2@resize_w450_nl.webp"},
+    //{ id: 21, nome: "Chaveiro de Gato Cute", preco: 2.90, img: "https://down-br.img.susercontent.com/file/br-11134207-81zts-ml5ox1qinhty9c.webp" },
+
+    //{ id: 22, nome: "Infinity Fidget Antiestresse", preco: 19.50, img: "https://down-br.img.susercontent.com/file/br-11134207-81zul-ml5mzqwbo6x2af@resize_w450_nl.webp"},
+    //{ id: 23, nome: "Brinquedo Shark Flexível", preco: 10.50, img: "https://down-br.img.susercontent.com/file/br-11134207-81ztg-ml5ox1qk7ojpf2@resize_w450_nl.webp"},
+    //{ id: 24, nome: "Chaveiro de Gato Cute", preco: 2.90, img: "https://down-br.img.susercontent.com/file/br-11134207-81zts-ml5ox1qinhty9c.webp" },
 ];
 
 const produtosf = [
@@ -88,6 +104,12 @@ const produtosf = [
         nome: "Chaveiro de Gato Cute",
         preco: 2.90,
         custos: { filamentoGramas: 1.8, tempoHoras: 0.1, plus: 0.30, embalagem: 1 }
+    },
+    {
+        id: 13,
+        nome: "Cubo Infinito de Decoração",
+        preco: 14.90,
+        custos: { filamentoGramas: 23.33, tempoHoras: 1.8, plus: 0, embalagem: 1 }
     }
 ];
 
