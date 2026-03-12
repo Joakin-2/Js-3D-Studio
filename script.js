@@ -16,10 +16,10 @@ const produtos = [
     { id: 12, nome: "Chaveiro de Gato Cute", preco: 2.90, img: "https://down-br.img.susercontent.com/file/br-11134207-81zts-ml5ox1qinhty9c.webp" },
 
     //new { id: 13, nome: "Cubo Infinito de Decoração", preco: 14.90, img: "cube.png"},
-    //{ id: 14, nome: "Brinquedo Shark Flexível", preco: 10.50, img: "https://down-br.img.susercontent.com/file/br-11134207-81ztg-ml5ox1qk7ojpf2@resize_w450_nl.webp"},
-    //{ id: 15, nome: "Chaveiro de Gato Cute", preco: 2.90, img: "https://down-br.img.susercontent.com/file/br-11134207-81zts-ml5ox1qinhty9c.webp" },
+    //new { id: 14, nome: "Egg Fidget Toy", preco: 5.50, img: "https://down-br.img.susercontent.com/file/br-11134207-820lf-mlpehodbxqme6e@resize_w450_nl.webp"},
+    //new { id: 15, nome: "Peeps Easter Slider Flip", preco: 9.50, img: "https://down-br.img.susercontent.com/file/br-11134207-820lc-mlplcwygcvt0dc@resize_w450_nl.webp" },
 
-    //{ id: 16, nome: "Infinity Fidget Antiestresse", preco: 19.50, img: "https://down-br.img.susercontent.com/file/br-11134207-81zul-ml5mzqwbo6x2af@resize_w450_nl.webp"},
+    //new { id: 16, nome: "Raposa do Ártico Minimalista", preco: 10.80, img: "https://down-br.img.susercontent.com/file/br-11134207-820l5-mlplcwygfoxwfc.webp"},
     //{ id: 17, nome: "Brinquedo Shark Flexível", preco: 10.50, img: "https://down-br.img.susercontent.com/file/br-11134207-81ztg-ml5ox1qk7ojpf2@resize_w450_nl.webp"},
     //{ id: 18, nome: "Chaveiro de Gato Cute", preco: 2.90, img: "https://down-br.img.susercontent.com/file/br-11134207-81zts-ml5ox1qinhty9c.webp" },
 
@@ -110,6 +110,24 @@ const produtosf = [
         nome: "Cubo Infinito de Decoração",
         preco: 14.90,
         custos: { filamentoGramas: 23.33, tempoHoras: 1.8, plus: 0, embalagem: 1 }
+    },
+    {
+        id: 14,
+        nome: "Egg Fidget Toy",
+        preco: 5.50,
+        custos: { filamentoGramas: 14.37, tempoHoras: 0.7, plus: 0, embalagem: 1 }
+    },
+    {
+        id: 15,
+        nome: "Peeps Easter Slider Flip",
+        preco: 9.50,
+        custos: { filamentoGramas: 11, tempoHoras: 0.5, plus: 0, embalagem: 1 }
+    },
+    {
+        id: 16,
+        nome: "Raposa do Ártico Minimalista",
+        preco: 10.80,
+        custos: { filamentoGramas: 8.77, tempoHoras: 0.8, plus: 0, embalagem: 1 }
     }
 ];
 
