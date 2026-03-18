@@ -31,8 +31,8 @@ const produtos = [
     { id: 23, nome: "Jacaré Articulado BiteCroc", preco: 12.50, img: "https://down-br.img.susercontent.com/file/br-11134207-820l5-mly9rag5wnif82@resize_w450_nl.webp"},
     { id: 24, nome: "Óculos Pixel Minecraft", preco: 22.60, img: "https://down-br.img.susercontent.com/file/br-11134207-820ma-mly9rag652x382.webp" },
 
-    //{ id: 25, nome: "Cubo Infinito de Decoração", preco: 14.90, img: "cube.png"},
-    //{ id: 26, nome: "Egg Fidget Toy", preco: 5.50, img: "https://down-br.img.susercontent.com/file/br-11134207-820lf-mlpehodbxqme6e@resize_w450_nl.webp"},
+    //new { id: 25, nome: "Papagaio do Minecraft 3D", preco: 52.50, img: "https://down-br.img.susercontent.com/file/br-11134207-820lu-mlz5h9svnk07f1.webp},
+    //new { id: 26, nome: "Galinha do Minecraft 3D", preco: 34.90, img: "https://down-br.img.susercontent.com/file/br-11134207-820ly-mlz5h9svf4lj6c.webp"},
     //{ id: 27, nome: "Peeps Easter Slider Flip", preco: 9.50, img: "https://down-br.img.susercontent.com/file/br-11134207-820lc-mlplcwygcvt0dc@resize_w450_nl.webp" },
 
     //{ id: 28, nome: "Raposa do Ártico Minimalista", preco: 10.80, img: "https://down-br.img.susercontent.com/file/br-11134207-820l5-mlplcwygfoxwfc.webp"},
@@ -192,6 +192,18 @@ const produtosf = [
         nome: "Óculos Pixel Minecraft",
         preco: 22.60,
         custos: { filamentoGramas: 29.45, tempoHoras: 1.6, plus: 0, embalagem: 4 }
+    },
+    {
+        id: 25,
+        nome: "Papagaio do Minecraft 3D",
+        preco: 52.50,
+        custos: { filamentoGramas: 210.2, tempoHoras: 8.3, plus: 0, embalagem: 5 }
+    },
+    {
+        id: 26,
+        nome: "Galinha do Minecraft 3D",
+        preco: 34.90,
+        custos: { filamentoGramas: 137, tempoHoras: 4.6, plus: 0, embalagem: 5 }
     }
 ];
 
