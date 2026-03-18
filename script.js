@@ -15,21 +15,37 @@ const produtos = [
     { id: 11, nome: "Brinquedo Shark Flexível", preco: 10.50, img: "https://down-br.img.susercontent.com/file/br-11134207-81ztg-ml5ox1qk7ojpf2@resize_w450_nl.webp"},
     { id: 12, nome: "Chaveiro de Gato Cute", preco: 2.90, img: "https://down-br.img.susercontent.com/file/br-11134207-81zts-ml5ox1qinhty9c.webp" },
 
-    //new { id: 13, nome: "Cubo Infinito de Decoração", preco: 14.90, img: "cube.png"},
-    //new { id: 14, nome: "Egg Fidget Toy", preco: 5.50, img: "https://down-br.img.susercontent.com/file/br-11134207-820lf-mlpehodbxqme6e@resize_w450_nl.webp"},
-    //new { id: 15, nome: "Peeps Easter Slider Flip", preco: 9.50, img: "https://down-br.img.susercontent.com/file/br-11134207-820lc-mlplcwygcvt0dc@resize_w450_nl.webp" },
+    { id: 13, nome: "Cubo Infinito de Decoração", preco: 14.90, img: "cube.png"},
+    { id: 14, nome: "Egg Fidget Toy", preco: 5.50, img: "https://down-br.img.susercontent.com/file/br-11134207-820lf-mlpehodbxqme6e@resize_w450_nl.webp"},
+    { id: 15, nome: "Peeps Easter Slider Flip", preco: 9.50, img: "https://down-br.img.susercontent.com/file/br-11134207-820lc-mlplcwygcvt0dc@resize_w450_nl.webp" },
 
-    //new { id: 16, nome: "Raposa do Ártico Minimalista", preco: 10.80, img: "https://down-br.img.susercontent.com/file/br-11134207-820l5-mlplcwygfoxwfc.webp"},
-    //{ id: 17, nome: "Brinquedo Shark Flexível", preco: 10.50, img: "https://down-br.img.susercontent.com/file/br-11134207-81ztg-ml5ox1qk7ojpf2@resize_w450_nl.webp"},
-    //{ id: 18, nome: "Chaveiro de Gato Cute", preco: 2.90, img: "https://down-br.img.susercontent.com/file/br-11134207-81zts-ml5ox1qinhty9c.webp" },
+    { id: 16, nome: "Raposa do Ártico Minimalista", preco: 10.80, img: "https://down-br.img.susercontent.com/file/br-11134207-820l5-mlplcwygfoxwfc.webp"},
+    { id: 17, nome: "Fidget Giroscópio 4 Anéis", preco: 6.50, img: "https://down-br.img.susercontent.com/file/br-11134207-820m1-mly2bt9c30939d@resize_w450_nl.webp"},
+    { id: 18, nome: "Flores Minecraft Decorativas", preco: 69.90, img: "https://down-br.img.susercontent.com/file/br-11134207-820lb-mly72z7s4jk4a0.webp" },
 
-    //{ id: 19, nome: "Infinity Fidget Antiestresse", preco: 19.50, img: "https://down-br.img.susercontent.com/file/br-11134207-81zul-ml5mzqwbo6x2af@resize_w450_nl.webp"},
-    //{ id: 20, nome: "Brinquedo Shark Flexível", preco: 10.50, img: "https://down-br.img.susercontent.com/file/br-11134207-81ztg-ml5ox1qk7ojpf2@resize_w450_nl.webp"},
-    //{ id: 21, nome: "Chaveiro de Gato Cute", preco: 2.90, img: "https://down-br.img.susercontent.com/file/br-11134207-81zts-ml5ox1qinhty9c.webp" },
+    { id: 19, nome: "Flor Papoula do Minecraft", preco: 26.20, img: "https://down-br.img.susercontent.com/file/br-11134207-820lo-mly72z7w9fr4d3.webp"},
+    { id: 20, nome: "Flor Dente-de-leão do Mine", preco: 25.50, img: "https://down-br.img.susercontent.com/file/br-11134207-820lm-mly72z7w816oc6.webp"},
+    { id: 21, nome: "Flor Margarida do Minecraft", preco: 26.90, img: "https://down-br.img.susercontent.com/file/br-11134207-820ls-mly72z7waubk0f.webp" },
 
-    //{ id: 22, nome: "Infinity Fidget Antiestresse", preco: 19.50, img: "https://down-br.img.susercontent.com/file/br-11134207-81zul-ml5mzqwbo6x2af@resize_w450_nl.webp"},
-    //{ id: 23, nome: "Brinquedo Shark Flexível", preco: 10.50, img: "https://down-br.img.susercontent.com/file/br-11134207-81ztg-ml5ox1qk7ojpf2@resize_w450_nl.webp"},
-    //{ id: 24, nome: "Chaveiro de Gato Cute", preco: 2.90, img: "https://down-br.img.susercontent.com/file/br-11134207-81zts-ml5ox1qinhty9c.webp" },
+    { id: 22, nome: "Mini Kit 3 Slimes Minecraft", preco: 12.50, img: "https://down-br.img.susercontent.com/file/br-11134207-820lo-mly8glcow74065.webp"},
+    { id: 23, nome: "Jacaré Articulado BiteCroc", preco: 12.50, img: "https://down-br.img.susercontent.com/file/br-11134207-820l5-mly9rag5wnif82@resize_w450_nl.webp"},
+    { id: 24, nome: "Óculos Pixel Minecraft", preco: 22.60, img: "https://down-br.img.susercontent.com/file/br-11134207-820ma-mly9rag652x382.webp" },
+
+    //{ id: 25, nome: "Cubo Infinito de Decoração", preco: 14.90, img: "cube.png"},
+    //{ id: 26, nome: "Egg Fidget Toy", preco: 5.50, img: "https://down-br.img.susercontent.com/file/br-11134207-820lf-mlpehodbxqme6e@resize_w450_nl.webp"},
+    //{ id: 27, nome: "Peeps Easter Slider Flip", preco: 9.50, img: "https://down-br.img.susercontent.com/file/br-11134207-820lc-mlplcwygcvt0dc@resize_w450_nl.webp" },
+
+    //{ id: 28, nome: "Raposa do Ártico Minimalista", preco: 10.80, img: "https://down-br.img.susercontent.com/file/br-11134207-820l5-mlplcwygfoxwfc.webp"},
+    //{ id: 29, nome: "Fidget Giroscópio 4 Anéis", preco: 6.50, img: "https://down-br.img.susercontent.com/file/br-11134207-820m1-mly2bt9c30939d@resize_w450_nl.webp"},
+    //{ id: 30, nome: "Flores Minecraft Decorativas", preco: 69.90, img: "https://down-br.img.susercontent.com/file/br-11134207-820lb-mly72z7s4jk4a0.webp" },
+
+    //{ id: 31, nome: "Flor Papoula do Minecraft", preco: 26.20, img: "https://down-br.img.susercontent.com/file/br-11134207-820lo-mly72z7w9fr4d3.webp"},
+    //{ id: 32, nome: "Flor Dente-de-leão do Mine", preco: 25.50, img: "https://down-br.img.susercontent.com/file/br-11134207-820lm-mly72z7w816oc6.webp"},
+    //{ id: 33, nome: "Flor Margarida do Minecraft", preco: 26.90, img: "https://down-br.img.susercontent.com/file/br-11134207-820ls-mly72z7waubk0f.webp" },
+
+    //{ id: 34, nome: "Mini Kit 3 Slimes Minecraft", preco: 12.50, img: "https://down-br.img.susercontent.com/file/br-11134207-820lo-mly8glcow74065.webp"},
+    //{ id: 35, nome: "Jacaré Articulado BiteCroc", preco: 12.50, img: "https://down-br.img.susercontent.com/file/br-11134207-820l5-mly9rag5wnif82@resize_w450_nl.webp"},
+    //{ id: 36, nome: "Chaveiro de Gato Cute", preco: 2.90, img: "https://down-br.img.susercontent.com/file/br-11134207-81zts-ml5ox1qinhty9c.webp" },
 ];
 
 const produtosf = [
@@ -37,19 +53,19 @@ const produtosf = [
         id: 1,
         nome: "Disparervilha Inspirado Pvz",
         preco: 19.90,
-        custos: { filamentoGramas: 43, tempoHoras: 2.5, plus: 0, embalagem: 1 }
+        custos: { filamentoGramas: 43, tempoHoras: 2.5, plus: 0, embalagem: 3 }
     },
     {
         id: 2,
         nome: "Flor Tulipa Estilo Minecraft",
         preco: 10.50,
-        custos: { filamentoGramas: 25.5, tempoHoras: 1.3, plus: 0, embalagem: 1 }
+        custos: { filamentoGramas: 25.5, tempoHoras: 1.3, plus: 0, embalagem: 2 }
     },
     {
         id: 3,
         nome: "Porta-copos Estilo LEGO",
         preco: 35.90,
-        custos: { filamentoGramas: 150.4, tempoHoras: 5.2, plus: 0, embalagem: 1 }
+        custos: { filamentoGramas: 150.4, tempoHoras: 5.2, plus: 0, embalagem: 4 }
     },
     {
         id: 4,
@@ -128,6 +144,54 @@ const produtosf = [
         nome: "Raposa do Ártico Minimalista",
         preco: 10.80,
         custos: { filamentoGramas: 8.77, tempoHoras: 0.8, plus: 0, embalagem: 1 }
+    },
+    {
+        id: 17,
+        nome: "Fidget Giroscópio 4 Anéis",
+        preco: 6.50,
+        custos: { filamentoGramas: 10, tempoHoras: 0.5, plus: 0, embalagem: 1 }
+    },
+    {
+        id: 18,
+        nome: "Flores Minecraft Decorativas",
+        preco: 69.90,
+        custos: { filamentoGramas: 267.05, tempoHoras: 10.4, plus: 0, embalagem: 5 }
+    },
+    {
+        id: 19,
+        nome: "Flor Papoula do Minecraft",
+        preco: 26.20,
+        custos: { filamentoGramas: 86.79, tempoHoras: 3.5, plus: 0, embalagem: 3 }
+    },
+    {
+        id: 20,
+        nome: "Flor Dente-de-leão do Mine",
+        preco: 25.50,
+        custos: { filamentoGramas: 88.97, tempoHoras: 3.4, plus: 0, embalagem: 3 }
+    },
+    {
+        id: 21,
+        nome: "Flor Margarida do Minecraft",
+        preco: 26.90,
+        custos: { filamentoGramas: 91.27, tempoHoras: 3.5, plus: 0, embalagem: 3 }
+    },
+    {
+        id: 22,
+        nome: "Mini Kit 3 Slimes Minecraft",
+        preco: 12.50,
+        custos: { filamentoGramas: 21.3, tempoHoras: 1.3, plus: 0, embalagem: 1 }
+    },
+    {
+        id: 23,
+        nome: "Jacaré Articulado BiteCroc",
+        preco: 12.50,
+        custos: { filamentoGramas: 13.17, tempoHoras: 1.1, plus: 0, embalagem: 1 }
+    },
+    {
+        id: 24,
+        nome: "Óculos Pixel Minecraft",
+        preco: 22.60,
+        custos: { filamentoGramas: 29.45, tempoHoras: 1.6, plus: 0, embalagem: 4 }
     }
 ];
 
