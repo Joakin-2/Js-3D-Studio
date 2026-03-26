@@ -33,7 +33,7 @@ const produtos = [
 
     //new { id: 25, nome: "Papagaio do Minecraft 3D", preco: 52.50, img: "https://down-br.img.susercontent.com/file/br-11134207-820lu-mlz5h9svnk07f1.webp},
     //new { id: 26, nome: "Galinha do Minecraft 3D", preco: 34.90, img: "https://down-br.img.susercontent.com/file/br-11134207-820ly-mlz5h9svf4lj6c.webp"},
-    //{ id: 27, nome: "Peeps Easter Slider Flip", preco: 9.50, img: "https://down-br.img.susercontent.com/file/br-11134207-820lc-mlplcwygcvt0dc@resize_w450_nl.webp" },
+    //new { id: 27, nome: "Suporte de Celular de Mesa", preco: 18.90, img: "https://down-br.img.susercontent.com/file/br-11134207-820m7-mmayuf68c83q05.webp" },
 
     //{ id: 28, nome: "Raposa do Ártico Minimalista", preco: 10.80, img: "https://down-br.img.susercontent.com/file/br-11134207-820l5-mlplcwygfoxwfc.webp"},
     //{ id: 29, nome: "Fidget Giroscópio 4 Anéis", preco: 6.50, img: "https://down-br.img.susercontent.com/file/br-11134207-820m1-mly2bt9c30939d@resize_w450_nl.webp"},
@@ -204,6 +204,12 @@ const produtosf = [
         nome: "Galinha do Minecraft 3D",
         preco: 34.90,
         custos: { filamentoGramas: 137, tempoHoras: 4.6, plus: 0, embalagem: 5 }
+    },
+    {
+        id: 27,
+        nome: "Suporte de Celular de Mesa",
+        preco: 18.90,
+        custos: { filamentoGramas: 37, tempoHoras: 1, plus: 0, embalagem: 2 }
     }
 ];
 
