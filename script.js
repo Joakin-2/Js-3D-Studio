@@ -35,8 +35,8 @@ const produtos = [
     //new { id: 26, nome: "Galinha do Minecraft 3D", preco: 34.90, img: "https://down-br.img.susercontent.com/file/br-11134207-820ly-mlz5h9svf4lj6c.webp"},
     //new { id: 27, nome: "Suporte de Celular de Mesa", preco: 18.90, img: "https://down-br.img.susercontent.com/file/br-11134207-820m7-mmayuf68c83q05.webp" },
 
-    //{ id: 28, nome: "Raposa do Ártico Minimalista", preco: 10.80, img: "https://down-br.img.susercontent.com/file/br-11134207-820l5-mlplcwygfoxwfc.webp"},
-    //{ id: 29, nome: "Fidget Giroscópio 4 Anéis", preco: 6.50, img: "https://down-br.img.susercontent.com/file/br-11134207-820m1-mly2bt9c30939d@resize_w450_nl.webp"},
+    //new { id: 28, nome: "Kit com 10 Prendedores", preco: 24.50, img: "https://down-br.img.susercontent.com/file/br-11134207-820le-mmv3amm94r9ca3@resize_w450_nl.webp"},
+    //new { id: 29, nome: "Escultura de Jesus 3D", preco: 38.90, img: "https://down-br.img.susercontent.com/file/br-11134207-820lx-mmv3amm9hedcfd@resize_w450_nl.webp"},
     //{ id: 30, nome: "Flores Minecraft Decorativas", preco: 69.90, img: "https://down-br.img.susercontent.com/file/br-11134207-820lb-mly72z7s4jk4a0.webp" },
 
     //{ id: 31, nome: "Flor Papoula do Minecraft", preco: 26.20, img: "https://down-br.img.susercontent.com/file/br-11134207-820lo-mly72z7w9fr4d3.webp"},
@@ -210,6 +210,18 @@ const produtosf = [
         nome: "Suporte de Celular de Mesa",
         preco: 18.90,
         custos: { filamentoGramas: 37, tempoHoras: 1, plus: 0, embalagem: 2 }
+    },
+    {
+        id: 28,
+        nome: "Kit com 10 Prendedores",
+        preco: 24.50,
+        custos: { filamentoGramas: 48.1, tempoHoras: 2.2, plus: 0, embalagem: 1 }
+    },
+    {
+        id: 29,
+        nome: "Escultura de Jesus 3D",
+        preco: 38.90,
+        custos: { filamentoGramas: 63.6, tempoHoras: 3.3, plus: 0, embalagem: 2 }
     }
 ];
 

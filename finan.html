@@ -55,6 +55,7 @@ th {
             <th>Watts</th>
             <th>Plus</th>
             <th>Embalagem</th>
+            <th>Shopee</th>
             <th>Custo Total</th>
             <th>Lucro</th>
             <th>Margem</th>
@@ -74,6 +75,10 @@ const valorKwh = 0.90; // R$/kWh
 const precoFilamentoKg = 120; // R$ por kg
 const precoPorGrama = precoFilamentoKg / 1000; // R$/g
 
+// 👉 TAXAS SHOPEE
+const taxaShopeePercentual = 0.18; // 18%
+const taxaShopeeFixa = 2; // R$ fixo por produto
+
 produtosf.forEach(produto => {
     const c = produto.custos;
 
@@ -84,8 +89,11 @@ produtosf.forEach(produto => {
     const consumoKwh = (potenciaImpressora / 1000) * c.tempoHoras;
     const custoEnergia = consumoKwh * valorKwh;
 
-    // Custo total
-    const custoTotal = custoFilamento + custoEnergia + c.plus + c.embalagem;
+    // 👉 Taxa Shopee
+    const taxaShopee = (produto.preco * taxaShopeePercentual) + taxaShopeeFixa;
+
+    // 👉 Custo total (AGORA COM SHOPEE)
+    const custoTotal = custoFilamento + custoEnergia + c.plus + c.embalagem + taxaShopee;
 
     const lucro = produto.preco - custoTotal;
     const margem = ((lucro / produto.preco) * 100).toFixed(1);
@@ -100,6 +108,7 @@ produtosf.forEach(produto => {
             <td>${formatar(custoEnergia)}</td>
             <td>${formatar(c.plus)}</td>
             <td>${formatar(c.embalagem)}</td>
+            <td>${formatar(taxaShopee)}</td> <!-- NOVO -->
             <td>${formatar(custoTotal)}</td>
             <td class="${lucro >= 0 ? 'lucro' : 'prejuizo'}">
                 ${formatar(lucro)}
@@ -108,7 +117,6 @@ produtosf.forEach(produto => {
         </tr>
     `;
 });
-
 </script>
 
 </body>
