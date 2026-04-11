@@ -36,7 +36,7 @@ const produtos = [
     //new { id: 27, nome: "Suporte de Celular de Mesa", preco: 18.90, img: "https://down-br.img.susercontent.com/file/br-11134207-820m7-mmayuf68c83q05.webp" },
 
     //new { id: 28, nome: "Kit com 10 Prendedores", preco: 18.50, img: "https://down-br.img.susercontent.com/file/br-11134207-820le-mmv3amm94r9ca3@resize_w450_nl.webp"},
-    //new { id: 29, nome: "Escultura de Jesus 3D", preco: 31.90, img: "https://down-br.img.susercontent.com/file/br-11134207-820lx-mmv3amm9hedcfd@resize_w450_nl.webp"},
+    //new { id: 29, nome: "Escultura de Jesus 3D", preco: 31.90, img: "https://down-br.img.susercontent.com/file/br-11134207-820l8-mmxicqy6xhc1a7.webp"},
     //{ id: 30, nome: "Flores Minecraft Decorativas", preco: 69.90, img: "https://down-br.img.susercontent.com/file/br-11134207-820lb-mly72z7s4jk4a0.webp" },
 
     //{ id: 31, nome: "Flor Papoula do Minecraft", preco: 26.20, img: "https://down-br.img.susercontent.com/file/br-11134207-820lo-mly72z7w9fr4d3.webp"},
