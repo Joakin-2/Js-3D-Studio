@@ -55,7 +55,7 @@ th {
             <th>Watts</th>
             <th>Plus</th>
             <th>Embalagem</th>
-            <th>Shopee</th>
+            <th>Taxa</th>
             <th>Custo Total</th>
             <th>Lucro</th>
             <th>Margem</th>
@@ -79,7 +79,70 @@ const precoPorGrama = precoFilamentoKg / 1000; // R$/g
 const taxaShopeePercentual = 0.18; // 18%
 const taxaShopeeFixa = 2; // R$ fixo por produto
 
-produtosf.forEach(produto => {
+function calcularTaxa(tipo, preco) {
+    if (tipo === 1) {
+        // Shopee
+        return (preco * taxaShopeePercentual) + taxaShopeeFixa;
+    } else if (tipo === 2) {
+        // Frete (exemplo fixo ou ajuste depois)
+        return 12; 
+    } else {
+        // Sem taxa
+        return 0;
+    }
+}
+
+function trocarTaxa(elemento, index) {
+    let tipoAtual = parseInt(elemento.dataset.tipo);
+
+    // Alterna 1 → 2 → 3 → 1
+    tipoAtual = tipoAtual === 3 ? 1 : tipoAtual + 1;
+
+    elemento.dataset.tipo = tipoAtual;
+
+    let texto = "";
+    if (tipoAtual === 1) texto = "Shopee";
+    if (tipoAtual === 2) texto = "Frete";
+    if (tipoAtual === 3) texto = "Sem taxa";
+
+    elemento.innerText = texto;
+
+    atualizarLinha(elemento.parentElement, index, tipoAtual);
+}
+
+function atualizarLinha(linha, index, tipoTaxa) {
+    const produto = produtosf[index];
+    const c = produto.custos;
+
+    const custoFilamento = c.filamentoGramas * precoPorGrama;
+
+    const consumoKwh = (potenciaImpressora / 1000) * c.tempoHoras;
+    const custoEnergia = consumoKwh * valorKwh;
+
+    const taxa = calcularTaxa(tipoTaxa, produto.preco);
+
+    const custoTotal = custoFilamento + custoEnergia + c.plus + c.embalagem + taxa;
+
+    const lucro = produto.preco - custoTotal;
+    const margem = ((lucro / produto.preco) * 100).toFixed(1);
+
+    let texto = "";
+if (tipoTaxa === 1) texto = "Shopee";
+if (tipoTaxa === 2) texto = "Frete";
+if (tipoTaxa === 3) texto = "Sem taxa";
+
+linha.cells[8].innerHTML = `
+    ${texto}<br>
+    <small>R$ ${taxa.toFixed(2)}</small>
+`;
+    linha.cells[9].innerText = `R$ ${custoTotal.toFixed(2)}`;
+    linha.cells[10].innerText = `R$ ${lucro.toFixed(2)}`;
+    linha.cells[11].innerText = `${margem}%`;
+
+    linha.cells[10].className = lucro >= 0 ? "lucro" : "prejuizo";
+}
+
+produtosf.forEach((produto, index) => {
     const c = produto.custos;
 
     // Cálculo filamento
@@ -90,7 +153,7 @@ produtosf.forEach(produto => {
     const custoEnergia = consumoKwh * valorKwh;
 
     // 👉 Taxa Shopee
-    const taxaShopee = (produto.preco * taxaShopeePercentual) + taxaShopeeFixa;
+    const taxaShopee = calcularTaxa(1, produto.preco);
 
     // 👉 Custo total (AGORA COM SHOPEE)
     const custoTotal = custoFilamento + custoEnergia + c.plus + c.embalagem + taxaShopee;
@@ -108,8 +171,8 @@ produtosf.forEach(produto => {
             <td>${formatar(custoEnergia)}</td>
             <td>${formatar(c.plus)}</td>
             <td>${formatar(c.embalagem)}</td>
-            <td>${formatar(taxaShopee)}</td> <!-- NOVO -->
-            <td>${formatar(custoTotal)}</td>
+            <td onclick="trocarTaxa(this, ${index})" data-tipo="1">Shopee<br><small>R$ ${taxaShopee.toFixed(2)}</small></td>
+           <td>${formatar(custoTotal)}</td>
             <td class="${lucro >= 0 ? 'lucro' : 'prejuizo'}">
                 ${formatar(lucro)}
             </td>
