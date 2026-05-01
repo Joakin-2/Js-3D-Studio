@@ -31,8 +31,8 @@ const produtos = [
     { id: 23, nome: "Jacaré Articulado BiteCroc", preco: 12.50, img: "https://down-br.img.susercontent.com/file/br-11134207-820l5-mly9rag5wnif82@resize_w450_nl.webp"},
     { id: 24, nome: "Óculos Pixel Minecraft", preco: 22.60, img: "https://down-br.img.susercontent.com/file/br-11134207-820ma-mly9rag652x382.webp" },
 
-    //new { id: 25, nome: "Papagaio do Minecraft 3D", preco: 52.50, img: "https://down-br.img.susercontent.com/file/br-11134207-820lu-mlz5h9svnk07f1.webp},
-    //new { id: 26, nome: "Galinha do Minecraft 3D", preco: 39.90, img: "https://down-br.img.susercontent.com/file/br-11134207-820ly-mlz5h9svf4lj6c.webp"},
+    //new { id: 25, nome: "Papagaio do Minecraft 3D", preco: 56.50, img: "https://down-br.img.susercontent.com/file/br-11134207-820lu-mlz5h9svnk07f1.webp},
+    //new { id: 26, nome: "Galinha do Minecraft 3D", preco: 45.90, img: "https://down-br.img.susercontent.com/file/br-11134207-820ly-mlz5h9svf4lj6c.webp"},
     //new { id: 27, nome: "Suporte de Celular de Mesa", preco: 18.90, img: "https://down-br.img.susercontent.com/file/br-11134207-820m7-mmayuf68c83q05.webp" },
 
     //new { id: 28, nome: "Kit com 10 Prendedores", preco: 18.50, img: "https://down-br.img.susercontent.com/file/br-11134207-820lk-mmxicqyhxlhd80@resize_w450_nl.webp"},
@@ -196,13 +196,13 @@ const produtosf = [
     {
         id: 25,
         nome: "Papagaio do Minecraft 3D",
-        preco: 52.50,
+        preco: 56.50,
         custos: { filamentoGramas: 210.2, tempoHoras: 8.3, plus: 0, embalagem: 5 }
     },
     {
         id: 26,
         nome: "Galinha do Minecraft 3D",
-        preco: 39.90,
+        preco: 45.90,
         custos: { filamentoGramas: 137, tempoHoras: 4.6, plus: 0, embalagem: 5 }
     },
     {
