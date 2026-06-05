@@ -31,16 +31,16 @@ const produtos = [
     { id: 23, nome: "Jacaré Articulado BiteCroc", preco: 12.50, img: "https://down-br.img.susercontent.com/file/br-11134207-820l5-mly9rag5wnif82@resize_w450_nl.webp"},
     { id: 24, nome: "Óculos Pixel Minecraft", preco: 22.60, img: "https://down-br.img.susercontent.com/file/br-11134207-820ma-mly9rag652x382.webp" },
 
-    //new { id: 25, nome: "Papagaio do Minecraft 3D", preco: 56.50, img: "https://down-br.img.susercontent.com/file/br-11134207-820lu-mlz5h9svnk07f1.webp},
-    //new { id: 26, nome: "Galinha do Minecraft 3D", preco: 45.90, img: "https://down-br.img.susercontent.com/file/br-11134207-820ly-mlz5h9svf4lj6c.webp"},
-    //new { id: 27, nome: "Suporte de Celular de Mesa", preco: 18.90, img: "https://down-br.img.susercontent.com/file/br-11134207-820m7-mmayuf68c83q05.webp" },
+    { id: 25, nome: "Papagaio do Minecraft 3D", preco: 56.50, img: "https://down-br.img.susercontent.com/file/br-11134207-820lu-mlz5h9svnk07f1.webp},
+    { id: 26, nome: "Galinha do Minecraft 3D", preco: 45.90, img: "https://down-br.img.susercontent.com/file/br-11134207-820ly-mlz5h9svf4lj6c.webp"},
+    { id: 27, nome: "Suporte de Celular de Mesa", preco: 18.90, img: "https://down-br.img.susercontent.com/file/br-11134207-820m7-mmayuf68c83q05.webp" },
 
-    //new { id: 28, nome: "Kit com 10 Prendedores", preco: 18.50, img: "https://down-br.img.susercontent.com/file/br-11134207-820lk-mmxicqyhxlhd80@resize_w450_nl.webp"},
-    //new { id: 29, nome: "Escultura de Jesus 3D", preco: 31.90, img: "https://down-br.img.susercontent.com/file/br-11134207-820l8-mmxicqy6xhc1a7.webp"},
-    //{ id: 30, nome: "Flores Minecraft Decorativas", preco: 69.90, img: "https://down-br.img.susercontent.com/file/br-11134207-820lb-mly72z7s4jk4a0.webp" },
+    { id: 28, nome: "Kit com 10 Prendedores", preco: 18.50, img: "https://down-br.img.susercontent.com/file/br-11134207-820lk-mmxicqyhxlhd80@resize_w450_nl.webp"},
+    { id: 29, nome: "Escultura de Jesus 3D", preco: 31.90, img: "https://down-br.img.susercontent.com/file/br-11134207-820l8-mmxicqy6xhc1a7.webp"},
+    { id: 30, nome: "Espada Banana Retrátil", preco: 49.50, img: "https://down-br.img.susercontent.com/file/br-11134207-820m9-mp2zamtog3yed8.webp" },
 
-    //{ id: 31, nome: "Flor Papoula do Minecraft", preco: 26.20, img: "https://down-br.img.susercontent.com/file/br-11134207-820lo-mly72z7w9fr4d3.webp"},
-    //{ id: 32, nome: "Flor Dente-de-leão do Mine", preco: 25.50, img: "https://down-br.img.susercontent.com/file/br-11134207-820lm-mly72z7w816oc6.webp"},
+    { id: 31, nome: "Estátua Cavalo Decorativo", preco: 26.20, img: "https://down-br.img.susercontent.com/file/br-11134207-820l4-mp2zamtoojd2a4.webp"},
+    { id: 32, nome: "Decoração Coração 3D Ilusão", preco: 46.10, img: "https://down-br.img.susercontent.com/file/br-11134207-820mg-mp2zamtorchy1d.webp"},
     //{ id: 33, nome: "Flor Margarida do Minecraft", preco: 26.90, img: "https://down-br.img.susercontent.com/file/br-11134207-820ls-mly72z7waubk0f.webp" },
 
     //{ id: 34, nome: "Mini Kit 3 Slimes Minecraft", preco: 12.50, img: "https://down-br.img.susercontent.com/file/br-11134207-820lo-mly8glcow74065.webp"},
@@ -222,6 +222,24 @@ const produtosf = [
         nome: "Escultura de Jesus 3D",
         preco: 31.90,
         custos: { filamentoGramas: 63.6, tempoHoras: 3.3, plus: 0, embalagem: 2 }
+    },
+    {
+        id: 30,
+        nome: "Espada Banana Retrátil",
+        preco: 49.50,
+        custos: { filamentoGramas: 101.3, tempoHoras: 4.6, plus: 0, embalagem: 1 }
+    },
+    {
+        id: 31,
+        nome: "Estátua Cavalo Decorativo",
+        preco: 26.20,
+        custos: { filamentoGramas: 36.9, tempoHoras: 3.8, plus: 0, embalagem: 3 }
+    },
+    {
+        id: 32,
+        nome: "Decoração Coração 3D Ilusão",
+        preco: 46.10,
+        custos: { filamentoGramas: 140.61, tempoHoras: 5.5, plus: 0, embalagem: 3 }
     }
 ];
 
