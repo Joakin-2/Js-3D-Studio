@@ -41,11 +41,11 @@ const produtos = [
 
     { id: 31, nome: "Estátua Cavalo Decorativo", preco: 26.20, img: "https://down-br.img.susercontent.com/file/br-11134207-820l4-mp2zamtoojd2a4.webp"},
     { id: 32, nome: "Decoração Coração 3D Ilusão", preco: 46.10, img: "https://down-br.img.susercontent.com/file/br-11134207-820mg-mp2zamtorchy1d.webp"},
-    //{ id: 33, nome: "Flor Margarida do Minecraft", preco: 26.90, img: "https://down-br.img.susercontent.com/file/br-11134207-820ls-mly72z7waubk0f.webp" },
+    { id: 33, nome: "Cisne Decorativo tipo Crochê", preco: 21.40, img: "https://down-br.img.susercontent.com/file/br-11134207-820lz-mp3xuchdj8qtc9.webp" },
 
-    //{ id: 34, nome: "Mini Kit 3 Slimes Minecraft", preco: 12.50, img: "https://down-br.img.susercontent.com/file/br-11134207-820lo-mly8glcow74065.webp"},
-    //{ id: 35, nome: "Jacaré Articulado BiteCroc", preco: 12.50, img: "https://down-br.img.susercontent.com/file/br-11134207-820l5-mly9rag5wnif82@resize_w450_nl.webp"},
-    //{ id: 36, nome: "Chaveiro de Gato Cute", preco: 2.90, img: "https://down-br.img.susercontent.com/file/br-11134207-81zts-ml5ox1qinhty9c.webp" },
+    { id: 34, nome: "Vaso Decorativo com Suculenta", preco: 28.50, img: "https://down-br.img.susercontent.com/file/br-11134207-820ls-mp3xuchdngg57a.webp"},
+    { id: 35, nome: "Vaso Decorativo com Rosa 3D", preco: 20.80, img: "https://down-br.img.susercontent.com/file/br-11134207-820m9-mp42z64lh0xx5b.webp"},
+    { id: 36, nome: "Elefante Estilo Crochê", preco: 25.90, img: "https://down-br.img.susercontent.com/file/br-11134207-820m0-mp42z64lpgclc4.webp" },
 ];
 
 const produtosf = [
@@ -240,6 +240,30 @@ const produtosf = [
         nome: "Decoração Coração 3D Ilusão",
         preco: 46.10,
         custos: { filamentoGramas: 140.61, tempoHoras: 5.5, plus: 0, embalagem: 3 }
+    },
+    {
+        id: 33,
+        nome: "Cisne Decorativo tipo Crochê",
+        preco: 21.40,
+        custos: { filamentoGramas: 22.74, tempoHoras: 2.8, plus: 0, embalagem: 2 }
+    },
+    {
+        id: 34,
+        nome: "Vaso Decorativo com Suculenta",
+        preco: 26.50,
+        custos: { filamentoGramas: 50.2, tempoHoras: 2.6, plus: 0, embalagem: 3 }
+    },
+    {
+        id: 35,
+        nome: "Vaso Decorativo com Rosa 3D",
+        preco: 20.80,
+        custos: { filamentoGramas: 20.04, tempoHoras: 1.5, plus: 0, embalagem: 2 }
+    },
+    {
+        id: 36,
+        nome: "Elefante Estilo Crochê",
+        preco: 25.90,
+        custos: { filamentoGramas: 36.37, tempoHoras: 3.2, plus: 0, embalagem: 2 }
     }
 ];
 
