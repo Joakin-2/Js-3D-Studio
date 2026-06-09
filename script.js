@@ -46,6 +46,23 @@ const produtos = [
     { id: 34, nome: "Vaso Decorativo com Suculenta", preco: 28.50, categoria: "flor", img: "https://down-br.img.susercontent.com/file/br-11134207-820ls-mp3xuchdngg57a.webp"},
     { id: 35, nome: "Vaso Decorativo com Rosa 3D", preco: 20.80, categoria: "flor", img: "https://down-br.img.susercontent.com/file/br-11134207-820m9-mp42z64lh0xx5b.webp"},
     { id: 36, nome: "Elefante Estilo Crochê", preco: 25.90, categoria: "decoracao", img: "https://down-br.img.susercontent.com/file/br-11134207-820m0-mp42z64lpgclc4.webp" },
+
+    //{ id: 1, nome: "Disparervilha Inspirado Pvz", preco: 24.90, categoria: "colecionavel", img: "https://down-br.img.susercontent.com/file/br-11134207-81ztc-mkin905algcg5e.webp" },
+    //{ id: 2, nome: "Flor Tulipa Estilo Minecraft", preco: 16.50, categoria: "minecraft", img: "https://down-br.img.susercontent.com/file/br-11134207-81ztc-mkin905ekq9uec.webp" },
+    //{ id: 3, nome: "Porta-copos Estilo LEGO", preco: 42.90, categoria: "decoracao", img: "https://down-br.img.susercontent.com/file/br-11134207-81zun-mkjt97cqfuv47d.webp" },
+    
+    //{ id: 4, nome: "Fidget Cubo Infinito", preco: 15.20, categoria: "fidget", img: "https://down-br.img.susercontent.com/br-11134207-81zue-mko8gmu5h8ubc7"},
+    //{ id: 5, nome: "Porta-Copos Folha Monstera", preco: 8.90, categoria: "decoracao", img: "https://down-br.img.susercontent.com/br-11134207-81zub-mko9od5z708x37" },
+    //{ id: 6, nome: "Tubarão Articulado Brinquedo", preco: 12.80, categoria: "articulado", img: "https://down-br.img.susercontent.com/br-11134207-81zu5-mko9od5ze135c7" },
+
+    //{ id: 7, nome: "Dinossauro Rex Articulado", preco: 9.50, categoria: "articulado", img: "https://down-br.img.susercontent.com/br-11134207-81zu7-mkoa4s3st4hva1"},
+    //{ id: 8, nome: "Shuriken Fidget Spinner 3D", preco: 16.50, categoria: "fidget", img: "https://down-br.img.susercontent.com/file/br-11134207-81zug-mku5se7ejgg128.webp"},
+    //{ id: 9, nome: "Fidget Trevo da Sorte 4 Folhas", preco: 15.90, categoria: "fidget", img: "https://down-br.img.susercontent.com/file/br-11134207-81zuh-ml5ksgmnhhxj68.webp" },
+
+    //{ id: 10, nome: "Infinity Fidget Antiestresse", preco: 19.50, categoria: "fidget", img: "https://down-br.img.susercontent.com/file/br-11134207-81zul-ml5mzqwbo6x2af@resize_w450_nl.webp"},
+    //{ id: 11, nome: "Brinquedo Shark Flexível", preco: 10.50, categoria: "articulado", img: "https://down-br.img.susercontent.com/file/br-11134207-81ztg-ml5ox1qk7ojpf2@resize_w450_nl.webp"},
+    //{ id: 12, nome: "Chaveiro de Gato Cute", preco: 6.90, categoria: "decoracao", img: "https://down-br.img.susercontent.com/file/br-11134207-81zts-ml5ox1qinhty9c.webp" },
+
 ];
 
 const produtosf = [
